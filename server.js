@@ -75,11 +75,11 @@ var initDb = function(callback) {
 
 app.get('/', function (req, res) {
 
-  console.log("11111")
+  console.log("aaaaaa")
   // try to initialize the db on every request if it's not already
   // initialized.
   if (!db) {
-    console.log("2222")
+    console.log("bbbbbb")
     initDb(function(err){});
   }
   if (db) {
