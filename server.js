@@ -79,9 +79,11 @@ app.get('/', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
   if (!db) {
+    console.log("2222")
     initDb(function(err){});
   }
   if (db) {
+    console.log("33333")
     var col = db.collection('counts');
     // Create a document with request IP and current time of request
     col.insert({ip: req.ip, date: Date.now()});
